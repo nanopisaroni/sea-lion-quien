@@ -38,11 +38,11 @@
       segs += '<circle r="'+R+'" cx="75" cy="75" fill="none" stroke="'+p.color+'" stroke-width="26" stroke-dasharray="'+(frac*C)+' '+(C-(frac*C))+'" stroke-dashoffset="'+(-off*C)+'" transform="rotate(-90 75 75)"></circle>';
       off += frac;
     });
-    return '<svg class="donut" viewBox="0 0 150 150">'+segs+'<text x="75" y="70" text-anchor="middle" fill="#e9e5db" font-family="JetBrains Mono,monospace" font-size="15" font-weight="700">100%</text><text x="75" y="87" text-anchor="middle" fill="#8b97a4" font-family="JetBrains Mono,monospace" font-size="8.5">del JV</text></svg>';
+    return '<svg class="donut" viewBox="0 0 150 150">'+segs+'<text x="75" y="70" text-anchor="middle" fill="#0A133C" font-family="JetBrains Mono,monospace" font-size="15" font-weight="700">100%</text><text x="75" y="87" text-anchor="middle" fill="#84919C" font-family="JetBrains Mono,monospace" font-size="8.5">del JV</text></svg>';
   }
   function renderJv(){
     var box = el("jvChart");
-    var colors = { il:"#58c6d0", uk:"#7d93c7" };
+    var colors = { il:"#0065F2", uk:"#84919C" };
     var parts = D.jvSplit.map(function(x,i){ return { v:x.v, color: i===0?colors.il:colors.uk }; });
     var leg = "";
     D.jvSplit.forEach(function(x,i){
@@ -233,11 +233,11 @@
     var ic = function(cls){ return L.divIcon({ className:"", html:'<div class="'+cls+'"></div>', iconSize:[16,16], iconAnchor:[8,8] }); };
 
     // círculo 200 millas reclamadas por el Reino Unido alrededor de las islas
-    L.circle(m.malvinas, { radius:370400, color:"#e9e5db", weight:1.4, dashArray:"4 6", fillColor:"#e9e5db", fillOpacity:0.05 })
+    L.circle(m.malvinas, { radius:370400, color:"#0A133C", weight:1.2, dashArray:"5 7", fillColor:"#0A133C", fillOpacity:0.04 })
       .bindPopup("<b>Zona de 200 millas</b><br>La que el Reino Unido reclama alrededor de las islas ocupadas. La Argentina no la reconoce.").addTo(map);
 
     // línea de distancia
-    L.polyline([m.malvinas, m.sealion], { color:"#e8a33d", weight:1, opacity:.65, dashArray:"3 7" })
+    L.polyline([m.malvinas, m.sealion], { color:"#0065F2", weight:1.2, opacity:.7, dashArray:"3 6" })
       .bindTooltip("≈ 220 km al norte de las islas", { permanent:false }).addTo(map);
 
     L.marker(m.sealion, { icon: ic("marker-sea") }).addTo(map)
@@ -249,11 +249,11 @@
 
     var legend = el("mapLegend");
     legend.innerHTML =
-      '<span class="lg"><span class="sw" style="background:#e8a33d"></span>Proyecto Sea Lion</span>' +
-      '<span class="lg"><span class="sw" style="background:#a9c9ea"></span>Islas Malvinas (argentinas, ocupadas)</span>' +
-      '<span class="lg"><span class="sw" style="background:#75aadb"></span>Tierra del Fuego</span>' +
-      '<span class="lg"><span class="sw" style="background:transparent;border:1px dashed #e9e5db"></span>200 millas reclamadas por el Reino Unido</span>' +
-      '<span class="lg"><span class="sw" style="background:rgba(117,170,219,.35);border:1px solid #75aadb"></span>Plataforma continental argentina (capa oficial IGN)</span>';
+      '<span class="lg"><span class="sw" style="background:#0065F2"></span>Proyecto Sea Lion</span>' +
+      '<span class="lg"><span class="sw" style="background:#0A133C"></span>Islas Malvinas (argentinas, ocupadas)</span>' +
+      '<span class="lg"><span class="sw" style="background:#84919C"></span>Tierra del Fuego</span>' +
+      '<span class="lg"><span class="sw" style="background:transparent;border:1px dashed #0A133C"></span>200 millas reclamadas por el Reino Unido</span>' +
+      '<span class="lg"><span class="sw" style="background:rgba(0,101,242,.22);border:1px solid #0065F2"></span>Plataforma continental argentina (capa oficial IGN)</span>';
     setTimeout(function(){ map.invalidateSize(); }, 200);
   }
 
