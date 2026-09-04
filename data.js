@@ -1,13 +1,39 @@
-/* Sea Lion dossier — datos públicos reconstruidos al 4-sep-2026 */
+/* Sea Lion dossier v2 — datos públicos reconstruidos al 4-sep-2026 */
 window.SL = {
   updated: "4 de septiembre de 2026",
+  edicion: "N.º 7 · Año I · Argentina",
+
+  cintillo: "Las Islas Malvinas fueron, son y serán argentinas",
+
+  cover: {
+    kicker: "Informe especial · Hidrocarburos y soberanía",
+    title1: "El petróleo",
+    title2: "de las Malvinas:",
+    title3: "quiénes están detrás",
+    standfirst: "A 220 kilómetros al norte de las Islas Malvinas —territorio argentino ocupado por el Reino Unido desde 1833— avanza el mayor proyecto petrolero de la historia de la región. Lo operan una compañía israelí y una británica; lo financian, hasta el último eslabón, los fondos de pensión de Israel y el capital político de Londres. Esta investigación recorre la cadena completa: el negocio, los dueños y las personas que pueden perderlo todo si la Argentina pasa de las palabras a los hechos.",
+    byline: "Dossier de investigación · reconstruido sobre fuentes públicas y regulatorias",
+    place: "Argentina · 4 de septiembre de 2026"
+  },
+
+  leadQuote: {
+    t: "«Argentina rechaza la decisión final de inversión anunciada por licenciatarios ilegales… cualquier participación, directa o indirecta, en estas actividades constituye un acto ilícito»",
+    s: "Cancillería argentina, 11 de diciembre de 2025"
+  },
 
   stats: [
-    { n: "65%", l: "Participación de Navitas Petroleum (Israel), operador vía su subsidiaria británica NPDP", },
-    { n: "35%", l: "Participación de Rockhopper Exploration (Reino Unido), descubridora del campo en 2010" },
-    { n: "US$2.100M", l: "Capex total del proyecto a completamiento (US$1.800M solo hasta primer petróleo)" },
+    { n: "65%", l: "De Navitas Petroleum (Israel), operador del proyecto vía su subsidiaria británica NPDP" },
+    { n: "35%", l: "De Rockhopper Exploration (Reino Unido), descubridora del campo en 2010" },
+    { n: "US$2.100M", l: "Capex total del proyecto a completamiento (US$1.800M solo hasta el primer petróleo)" },
     { n: "~40%", l: "De Rockhopper en manos israelíes tras los aumentos de capital de 2025 y 2026" }
   ],
+
+  map: {
+    sealion: [-49.26556, -59.255],
+    malvinas: [-51.69, -57.86],
+    malvinasLabel: "Puerto Argentino",
+    tierraFuego: [-54.8, -66.6],
+    sealionDistKm: 220
+  },
 
   facts: [
     { k: "Descubrimiento", v: "2010, por Rockhopper. Cuenca Malvinas Norte, ~220 km al norte de las islas" },
@@ -19,11 +45,46 @@ window.SL = {
     { k: "NPV10", v: "US$3.720M para Navitas (2P+2C) · US$1.850M neto para Rockhopper (2C, Brent US$70)" }
   ],
 
+  projectQuote: {
+    t: "«La extracción de un recurso no renovable que pertenece a los argentinos»",
+    s: "Presidente Javier Milei, cadena nacional del 3 de septiembre de 2026"
+  },
+
   phases: [
     { tag: "NDA 1 · en ejecución", on: true, name: "Área norte — fase 1", p: "11 pozos subsea conectados al FPSO Aoka Mizu. Presupuesto US$1.800M hasta first oil. Perforación desde inicios de 2027, primer petróleo marzo 2028.", meta: "170 MMbbls · ~50.000 bbl/d pico" },
     { tag: "NDA 2 · aprobada", on: true, name: "Área norte — fase 2", p: "12 pozos adicionales, ~3 años después del primer petróleo. Financiable con la caja de la fase 1. (NDA 3 sumaría otros 16 pozos más adelante.)", meta: "+149 MMbbls · misma FPSO" },
     { tag: "CDA · en diseño", on: false, name: "Área central — CDA1 + CDA2", p: "38 pozos en total (20 + 18). Navitas ya ejerció la opción por el segundo FPSO (OSX-1, US$125M, cierre sept 2026). Plan al gobierno local y FID en 1H-2028; primera producción CDA1 a fines de 2030.", meta: "hasta +125.000 bbl/d · US$3.000M CDA1" }
   ],
+
+  capex: [
+    { fase: "NDA 1 → primer petróleo", v: 1800 },
+    { fase: "Proyecto hasta completamiento", v: 2100 },
+    { fase: "CDA 1 (expansión)", v: 3000 }
+  ],
+
+  jvSplit: [
+    { l: "Navitas Petroleum — operador", v: 65 },
+    { l: "Rockhopper Exploration", v: 35 }
+  ],
+
+  holdersNav: [
+    { name: "Harel Provident Funds", pct: 9.49, note: "grupo asegurador israelí Harel (sumando vehículos: ~11,8%)" },
+    { name: "Gideon Tadmor — fundador y chairman", pct: 9.04, note: "controla la gestión junto a Katz vía el socio gestor privado" },
+    { name: "Migdal Makefet Pension & Provident", pct: 6.07, note: "grupo Migdal" },
+    { name: "Phoenix Provident Fund", pct: 4.43, note: "grupo Phoenix (con Phoenix Investments: ~6,5%)" },
+    { name: "Noked Capital", pct: 4.43, note: "hedge fund israelí — también el nº 1 en Rockhopper" },
+    { name: "Harel Mutual Funds", pct: 1.82, note: "del grupo Harel" },
+    { name: "Yacob (Koby) Katz — co-fundador", pct: 1.59, note: "vice-chairman del socio gestor" }
+  ],
+  holdersNavNote: "Resto: free float del mercado de Tel Aviv (~62%). Capital total: ~121,8 millones de unidades.",
+
+  holdersRkh: [
+    { name: "Noked Capital", pct: 10.51, note: "hedge fund de Tel Aviv; subió en los aumentos de 2025 y 2026" },
+    { name: "Aedos Advisers (London) LLP", pct: 7.83, note: "Londres — asociada a SRM (Jon Paul Wood)" },
+    { name: "Brosh Funds", pct: 6.03, note: "gestionado por Exodus Management Israel (Brosh Capital + Brosh Equity)" },
+    { name: "ION Fund Management", pct: 4.63, note: "brazo de ION Asset Management (Herzliya / Nueva York)" }
+  ],
+  holdersRkhNote: "Además: Clal, Harel, Phoenix y Meitav (institucionales del aumento de agosto 2026, <3% cada uno). Total de capital en manos israelíes: ~40%. Capital: 1.051.439.462 acciones.",
 
   timeline: [
     { d: "2010", t: "Rockhopper descubre Sea Lion", c: "proyecto", x: "El pozo destapador de la cuenca Malvinas Norte. El gobierno argentino ya lo declara ilegal por estar en la plataforma continental argentina." },
@@ -41,7 +102,7 @@ window.SL = {
     { d: "Nov 2025", t: "El EIS pasa el filtro ambiental", c: "proyecto", x: "El Departamento de Recursos Minerales de las islas concluye que el EIS de Navitas cumple la legislación local." },
     { d: "10 Dic 2025", t: "FID: el proyecto se sanciona", c: "proyecto", x: "Navitas y Rockhopper toman la decisión final de inversión de la fase 1. El plan de fases 1 y 2 queda aprobado y las licencias pasan a fase de explotación (35 años)." },
     { d: "11 Dic 2025", t: "Cancillería argentina rechaza el FID", c: "argentina", x: "Comunicado oficial: rechaza el anuncio de «licenciatarios ilegales», recuerda las sanciones vigentes (Res. 133/2012, 456/2013 y 240/2022) y advierte a financiadores, aseguradoras y proveedores." },
-    { d: "22 Dic 2025", t: "Financial close", c: "proyecto", x: "Cierra el financiamiento: US$1.000M de deuda senior (US$350M a cargo de Rockhopper) + equity del JV. La colocación de Rockhopper se completa en US$142M; se lanza la oferta abierta. Deuda: US$1,8 a 2,1 mil millones." },
+    { d: "22 Dic 2025", t: "Financial close", c: "proyecto", x: "Cierra el financiamiento: US$1.000M de deuda senior (US$350M a cargo de Rockhopper) + equity del JV. La colocación de Rockhopper se completa en US$142M; se lanza la oferta abierta." },
     { d: "Ene 2026", t: "Navitas refinancia US$1.350M", c: "corporativo", x: "Nueva línea reserve-based lending (RBL) firmada el 19 de enero, respaldada por activos en EE.UU. (Shenandoah). Los bonos de Navitas cotizan en TASE." },
     { d: "Ene 2026", t: "Filings en Londres muestran el giro israelí", c: "corporativo", x: "Notificaciones a la LSE: más del 18% de Rockhopper queda en manos de tres fondos de Tel Aviv y Herzliya (Noked, Brosh, ION). Aedos Advisers reduce al 7,98%." },
     { d: "Feb 2026", t: "NSAI actualiza reservas con el plan de expansión", c: "proyecto", x: "Reporte independiente que incorpora el desarrollo del área central (CDA) con el segundo FPSO; con Brent de US$76, el DCF de Navitas sube ~39% vs. el reporte anterior." },
@@ -56,11 +117,11 @@ window.SL = {
   ],
 
   own: {
-    seaLion: { n: "SEA LION — proyecto", sub: "Cuenca Malvinas Norte · FID 10-dic-2025 · first oil mar-2028" },
+    seaLion: { n: "SEA LION — proyecto", sub: "Cuenca Malvinas Norte · plataforma continental argentina · FID 10-dic-2025" },
     navitas: [
       { id: "nv-gp", name: "FLR Oil & Gas Management Ltd — general partner", sub: "Socio gestor privado de la partnership · controla la gestión", flag: "il", kids: [
-        { name: "Gideon Tadmor", sub: "Chairman del GP · holder of control · 9,0% de las unidades", flag: "il", conf: "ok" },
-        { name: "Yacob (Koby) Katz", sub: "Vice-chairman del GP · holder of control · 1,6% de las unidades", flag: "il", conf: "ok" },
+        { name: "Gideon Tadmor", sub: "Chairman del GP · holder de control · 9,0% de las unidades", flag: "il", conf: "ok" },
+        { name: "Yacob (Koby) Katz", sub: "Vice-chairman del GP · holder de control · 1,6% de las unidades", flag: "il", conf: "ok" },
         { name: "Amit Kornhauser", sub: "CEO y director del GP", flag: "il", conf: "ok" }
       ]},
       { id: "nv-units", name: "Tenedores de unidades (TASE: NVPT)", sub: "Capital cotizado · sin control de gestión", flag: "il", kids: [
@@ -112,11 +173,12 @@ window.SL = {
     { ent: "Institucionales", name: "Clal · Harel · Phoenix · Meitav", rol: "Compradores del aumento de Rockhopper (ago 2026)", note: "Con ellos, ~40% de Rockhopper quedó en manos israelíes. La exposición final del proyecto es, en gran parte, el dinero de los futuros jubilados israelíes.", flag: "il", conf: "ok" }
   ],
 
-  argentina: [
-    { k: "2012-13", v: "Rockhopper: clandestina (Res. 133/2012) e inhabilitada 20 años (Res. 456/2013)." },
-    { k: "2022", v: "Navitas: misma sanción (Res. 240/2022). Base legal: leyes 26.659 y 26.915, que prohíben operar en la plataforma sin autorización argentina." },
-    { k: "2026", v: "Decreto del 3-sep-2026 con alcance a accionistas, directores y proveedores (según Reuters) + proyecto de «Ley de Defensa de la Soberanía Nacional»." },
-    { k: "2026", v: "Juicio federal (AAdeAA + CECIM) que pide bloquear las transacciones financieras del proyecto." }
+  causa: [
+    { t: "ONU · Resolución 2065 (XX), 1965", d: "Reconoce la existencia de una disputa de soberanía entre Argentina y el Reino Unido e insta a negociar una solución pacífica." },
+    { t: "ONU · Resolución 31/49, 1976", d: "Llama a las partes a no introducir modificaciones unilaterales de la situación mientras dure el proceso de negociación." },
+    { t: "Constitución Nacional · Cláusula Transitoria Primera", d: "Ratifica la soberanía argentina sobre las Islas Malvinas, Georgias del Sur y Sandwich del Sur y los espacios marítimos circundantes." },
+    { t: "Ley 26.659 (2011) y 26.915 (2013)", d: "Prohíben la exploración y explotación de hidrocarburos en la plataforma continental argentina sin autorización del Estado argentino." },
+    { t: "Ley 26.875 (2013) · Límite exterior de la plataforma", d: "Fija el límite exterior de la plataforma continental argentina según la presentación ante la CONVEMAR, aprobada por la Comisión de Límites de la ONU en 2016." }
   ],
 
   argStrip: [
@@ -136,6 +198,7 @@ window.SL = {
     { t: "Navitas — ESG 2024", d: "Gobernanza: revela al general partner (FLR Oil & Gas Management) y a sus holders de control.", s: "Navitas Petroleum · ESG Report", local: null, url: "http://www.navitaspet.com/wp-content/uploads/2026/04/Navitas_ESG_2024_ENG_FINAL.pdf" },
     { t: "Proyecto — Documentación ambiental (EIS)", d: "EIS completo, resumen no técnico y evaluaciones de impacto económico y social, publicados por el operador.", s: "Navitas · página del proyecto", local: null, url: "https://www.navitaspet.com/project/sea-lion/" },
     { t: "Argentina — Comunicado de Cancillería", d: "Rechazo del FID y advertencia a financiadores, aseguradoras y proveedores (11-dic-2025).", s: "Cancillería argentina", local: null, url: "https://www.cancilleria.gob.ar/en/announcements/news/question-malvinas-islands-argentina-rejects-announcements-made-unlawful-licensees" },
+    { t: "IGN Argentina — Capa «Plataforma Continental»", d: "Servicio WMS oficial del Instituto Geográfico Nacional con el límite exterior de la plataforma continental argentina (usado en el mapa de esta nota).", s: "wms.ign.gob.ar", local: null, url: "https://wms.ign.gob.ar/geoserver/ows?service=WMS&request=GetCapabilities" },
     { t: "Reuters — Israeli investors in the crosshairs", d: "Cable del 4-sep-2026: las medidas argentinas pueden alcanzar accionistas, directores y proveedores.", s: "Reuters", local: null, url: "https://www.reuters.com/business/energy/israeli-investors-crosshairs-argentinas-milei-over-falklands-oil-project-2026-09-04/" }
   ]
 };
