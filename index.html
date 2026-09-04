@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sea Lion · Quién está detrás del petróleo en las Malvinas</title>
+<meta name="description" content="Dossier interactivo de dominio público: el proyecto petrolero Sea Lion en las Islas Malvinas, sus operadores, la cadena de accionistas hasta las personas responsables, y el conflicto con Argentina.">
+<meta property="og:title" content="Sea Lion · Quién está detrás">
+<meta property="og:description" content="Navitas Petroleum, Rockhopper Exploration y la cadena de capital israelí y británico detrás del proyecto petrolero de las Islas Malvinas.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23071118'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' fill='%23e8a33d' text-anchor='middle'%3ESL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-in">
+    <a class="brand" href="#top">SEA&nbsp;LION<span class="brand-dot">·</span>DOSSIER</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#proyecto">Proyecto</a>
+      <a href="#timeline">Línea de tiempo</a>
+      <a href="#quien">Propiedad</a>
+      <a href="#personas">Personas</a>
+      <a href="#argentina">Argentina</a>
+      <a href="#docs">Documentos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <p class="kicker">Dossier de dominio público · Actualizado 4 sep 2026</p>
+      <h1>Quién está detrás<br>del petróleo en las <em>Malvinas</em></h1>
+      <p class="lede">El proyecto <strong>Sea Lion</strong>, a 220 km al norte de las Islas Malvinas, es el primer desarrollo petrolero de la región: inversión de más de <strong>US$ 2.100 millones</strong>, primer petróleo previsto para <strong>marzo de 2028</strong>. Lo operan una sociedad israelí y una británica — y detrás de ellas, hasta el último eslabón, hay fondos e instituciones israelíes que hoy concentran cerca del 40% de una de las dos compañías. Este dossier mapea la cadena completa: empresas, accionistas y personas.</p>
+      <div class="hero-meta">
+        <span class="hm-item"><span class="hm-label">Operador 65%</span> Navitas Petroleum (IL)</span>
+        <span class="hm-sep">·</span>
+        <span class="hm-item"><span class="hm-label">Socio 35%</span> Rockhopper Exploration (UK)</span>
+        <span class="hm-sep">·</span>
+        <span class="hm-item"><span class="hm-label">FID</span> 10 dic 2025</span>
+      </div>
+      <div class="map-rule" aria-hidden="true">
+        <svg viewBox="0 0 960 120" role="img">
+          <line x1="0" y1="60" x2="960" y2="60" stroke="rgba(255,255,255,0.06)"/>
+          <line x1="120" y1="60" x2="480" y2="60" stroke="#e8a33d" stroke-dasharray="2 6" opacity="0.5"/>
+          <circle cx="120" cy="60" r="4" fill="#3c4a58"/>
+          <text x="120" y="42" text-anchor="middle" class="map-lab">Tierra del Fuego</text>
+          <circle cx="420" cy="60" r="5" fill="#8a93a0"/>
+          <text x="420" y="42" text-anchor="middle" class="map-lab">Islas Malvinas</text>
+          <circle cx="680" cy="60" r="7" fill="#e8a33d"/>
+          <text x="680" y="88" text-anchor="middle" class="map-lab map-lab-hot">Sea Lion · ~220 km al norte</text>
+          <text x="300" y="74" class="map-note">esquema, no a escala</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats">
+    <div class="container stats-grid" id="statsGrid"></div>
+  </section>
+
+  <!-- ============ PROYECTO ============ -->
+  <section id="proyecto" class="section">
+    <div class="container">
+      <p class="kicker">01 · El yacimiento</p>
+      <h2>Un descubrimiento de 2010 que recién ahora se desarrolla</h2>
+      <div class="cols-2">
+        <div>
+          <p>Descubierto por Rockhopper en 2010 y estancado 15 años por el precio del crudo y los cambios de dueño, Sea Lion arrancó de verdad el <strong>10 de diciembre de 2025</strong>, cuando Navitas y Rockhopper tomaron la decisión final de inversión (FID) y 12 días después cerraron el financiamiento. El plan aprobado por la administración colonial británica de las islas cubre las fases 1 y 2 del área de desarrollo norte; el first oil está previsto para marzo de 2028.</p>
+          <p>La cadena de valor la monta <strong>NPDP</strong> (Navitas Petroleum Development &amp; Production Ltd), subsidiaria británica 100% de Navitas con oficinas en Londres, Aberdeen y Stanley, que ya contrató el FPSO, el equipo de perforación y el tendido submarino.</p>
+        </div>
+        <ul class="fact-list" id="factList"></ul>
+      </div>
+      <div class="phase-grid" id="phaseGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section id="timeline" class="section alt">
+    <div class="container">
+      <p class="kicker">02 · Línea de tiempo</p>
+      <h2>2010 → 2026: quince años hasta la primera gota</h2>
+      <div class="tl-filters" id="tlFilters"></div>
+      <div class="tl" id="tl"></div>
+      <p class="tl-hint">Elegí un evento para ver el detalle · podés filtrar por tipo</p>
+    </div>
+  </section>
+
+  <!-- ============ QUIEN (propiedad) ============ -->
+  <section id="quien" class="section">
+    <div class="container">
+      <p class="kicker">03 · La propiedad</p>
+      <h2>Del joint venture hasta las personas</h2>
+      <p class="lede-soft">Tocá cada nodo para expandirlo. El control real de la sociedad israelí no está en la bolsa: lo ejercen dos personas a través del socio gestor privado (general partner). La empresa británica, sin controlante, quedó en manos del capital israelí.</p>
+      <div class="own" id="own"></div>
+    </div>
+  </section>
+
+  <!-- ============ PERSONAS ============ -->
+  <section id="personas" class="section alt">
+    <div class="container">
+      <p class="kicker">04 · Las personas</p>
+      <h2>Responsables hasta el último eslabón</h2>
+      <p class="lede-soft">Directores, gestores y dueños de fondo de cada entidad de la cadena. La etiqueta marca el nivel de confirmación de cada dato.</p>
+      <div class="per-filters" id="perFilters"></div>
+      <div class="per-grid" id="perGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ ARGENTINA ============ -->
+  <section id="argentina" class="section">
+    <div class="container">
+      <p class="kicker">05 · El conflicto con Argentina</p>
+      <h2>La causa nacional y sus palancas</h2>
+      <div class="cols-2">
+        <div>
+          <p>Argentina considera a las licencias ilegales: el 3 de septiembre de 2026, en cadena nacional, el presidente Milei anunció un decreto de sanciones contra las empresas que exploten hidrocarburos en la plataforma continental argentina sin autorización — con alcance que, según Reuters, puede extenderse a <strong>accionistas, directores y proveedores</strong> — más un paquete de leyes (incluida una «Ley de Defensa de la Soberanía Nacional»), una base naval en Tierra del Fuego y un Consejo de Seguridad Nacional.</p>
+          <p>La clave del mapa: <strong>los dos operadores actuales no tienen activos en Argentina</strong> (Navitas y Rockhopper ya están sancionadas e inhabilitadas, pero no tienen nada local que se les pueda tocar). El que sí tiene operaciones grandes en el país —offshore en Tierra del Fuego y Vaca Muerta— es <strong>Harbour Energy</strong>, justamente el ex-operador de Sea Lion que se fue del proyecto en 2022.</p>
+        </div>
+        <ul class="arg-list" id="argList"></ul>
+      </div>
+      <div class="arg-strip" id="argStrip"></div>
+    </div>
+  </section>
+
+  <!-- ============ DOCS ============ -->
+  <section id="docs" class="section alt">
+    <div class="container">
+      <p class="kicker">06 · Documentos y fuentes</p>
+      <h2>Los papeles públicos de la historia</h2>
+      <p class="lede-soft">Navitas no cotiza en EE.UU. (no hay filings ante la SEC): reporta a la autoridad israelí (ISA/TASE, sistema MAYA). Rockhopper reporta a la bolsa de Londres (AIM). Acá están las piezas clave, descargables o con su vínculo original.</p>
+      <div class="docs" id="docs"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="kicker">Metodología</p>
+    <p class="foot-text">Datos reconstruidos el 4 de septiembre de 2026 a partir de fuentes primarias y públicas: comunicados regulatorios (RNS/LSE, reportes periódicos ante ISA-TASE), páginas oficiales de las compañías, reportes de reservas de Netherland Sewell &amp; Associates (NSAI), comunicados de la Cancillería argentina y cables de agencias (Reuters). Los porcentajes accionarios de Navitas provienen de consolidaciones de notificaciones a TASE (MarketScreener/LSEG); los de Rockhopper, de su página oficial de accionistas al 2 de septiembre de 2026. Este dossier no constituye consejo legal, financiero ni de inversión. Las Islas Malvinas son argentinas.</p>
+    <p class="foot-small">Sea Lion · Dossier interactivo · 2026 — hecho con fuentes de acceso público.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
